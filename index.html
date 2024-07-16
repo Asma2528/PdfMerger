@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Merger</title>
+    <style>
+        input[type="file"]::file-selector-button {
+            background-color: #101220;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+  <script type="module" crossorigin src="/assets/main.a95b14d0.js"></script>
+  <link rel="stylesheet" href="/assets/main.ae47386c.css">
+</head>
+<body class="bg-indigo-900 font-mono">
+    <div class=" bg-indigo-400 container mx-auto flex flex-col p-5 w-1/2 justify-center items-center my-24 rounded-md">
+        <h1 class="font-bold text-center text-3xl mb-2 text-indigo-950">PDF Merger</h1>
+        <img src="/assets/pdficon1.9817352b.gif" class="w-12 h-14 mb-6" alt="Pdf gif">
+        <form id="uploadForm" class="flex flex-col justify-center items-center text-indigo-950 space-y-4" action="/merge" method="post" enctype="multipart/form-data">
+        <label class="text-lg font-semibold" for="Uploadpdf">Select the pdf file you want to merge: </label>
+        <input type="file" class="bg-indigo-300 p-4" name="pdfs" id="fileInput" multiple accept=".pdf">
+        <p id="errorMsg" class="text-sm text-pink-800"></p>
+        <input class="p-1 text-sm border-none outline-none rounded-md w-16 bg-indigo-950 text-white cursor-pointer hover:bg-indigo-900" type="submit" value="Submit">
+    </form>
+    </div>
+    
+</body>
+</html>
